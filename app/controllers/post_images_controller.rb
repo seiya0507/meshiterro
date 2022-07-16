@@ -1,6 +1,6 @@
 class PostImagesController < ApplicationController
   def new
-    @post_image = Post_image.new
+    @post_image = PostImage.new
   end
 
 
@@ -10,20 +10,20 @@ class PostImagesController < ApplicationController
     @post_image.save
     redirect_to post_images_path
   end
-    
-    
+
+
   def index
   end
 
   def show
   end
-  
+
   def destroy
   end
-  
-  
+
+
   private
-  
+
   def post_image_params
     params.require(:post_image).permit(:shop_name, :image, :caption)
   end
